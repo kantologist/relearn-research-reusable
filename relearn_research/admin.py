@@ -11,8 +11,8 @@ class WebsiteAdmin(admin.ModelAdmin):
     list_diplay_link = ('name',)
 
     def url_(self, instance):
-        return '<a href={url} target="_blank">{title}</a>'.format(url=instance.link,
-                                                                  title=instance.link)
+        return '<a href={url} target="_blank">{title}</a>'.format(url=instance.url,
+                                                                  title=instance.url)
     url_.allow_tags = True
 
 
@@ -23,8 +23,8 @@ class InformationAdmin(admin.ModelAdmin):
     raw_id_fields = ('checker_runtime',)
 
     def url_(self, instance):
-        return'<a href={url} target="_blank"">{title}</a>'.format(url=instance.link,
-                                                                  title=instance.link)
+        return'<a href={url} target="_blank"">{title}</a>'.format(url=instance.url,
+                                                                  title=instance.url)
     url_.allow_tags = True
 
 

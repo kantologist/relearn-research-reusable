@@ -12,7 +12,7 @@ from django.dispatch import receiver
 @python_2_unicode_compatible
 class Website(models.Model):
     name = models.CharField(max_length=200)
-    link = models.URLField()
+    url = models.URLField()
     scraper = models.ForeignKey(Scraper, blank=True, null=True, on_delete=models.SET_NULL)
     scraper_runtime = models.ForeignKey(SchedulerRuntime,
                                         blank=True, null=True, on_delete=models.SET_NULL)
@@ -25,8 +25,9 @@ class Website(models.Model):
 class Information(models.Model):
     title = models.CharField(max_length=200)
     website = models.ForeignKey(Website)
-    summary = models.TextField(blank=True)
-    link = models.URLField()
+    description = models.TextField(blank=True)
+    url = models.URLField()
+    thumbnail = models.ImageField(blank=True)
     date = models.TextField(blank=True)
     checker_runtime = models.ForeignKey(SchedulerRuntime,
                                         blank=True, null=True, on_delete=models.SET_NULL)
@@ -51,8 +52,3 @@ def pre_delete_handler(sender, instance, using, **kwargs):
                 instance.checker_runtime.delete()
 
 pre_delete.connect(pre_delete_handler)
-
-
-
-
-

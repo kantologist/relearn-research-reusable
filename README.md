@@ -4,7 +4,7 @@ This is a python app so to run ensure python 2.7.12 is installed.
 
 make a virtual env after installing it. run the code below.
 
-   $ virtualenv env
+    $ virtualenv env
 
 activate it with the command below
 

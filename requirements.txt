@@ -30,7 +30,7 @@ pyOpenSSL==16.2.0
 pysqlite==2.8.3
 pytz==2016.7
 queuelib==1.4.2
-Scrapy==1.1.0
+Scrapy==2.6.1
 scrapy-djangoitem==1.1.0
 service-identity==16.0.0
 six==1.10.0
@@ -72,7 +72,7 @@ pyOpenSSL==16.2.0
 pysqlite==2.8.3
 pytz==2016.7
 queuelib==1.4.2
-Scrapy==1.1.0
+Scrapy==2.6.1
 scrapy-djangoitem==1.1.0
 service-identity==16.0.0
 six==1.10.0
